@@ -7,6 +7,7 @@
 #include <fstream>
 #include <limits.h>
 #include "SerialStreamBuf.h"
+#include <string.h>
 
 using namespace std ;
 using namespace LibSerial ;

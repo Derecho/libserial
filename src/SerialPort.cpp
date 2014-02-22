@@ -27,9 +27,12 @@
 #include <cassert>
 #include <termios.h>
 #include <fcntl.h>
+#include <unistd.h>
 #include <sys/ioctl.h>
 #include <sys/time.h>
 #include <signal.h>
+#include <string.h>
+#include <stdlib.h>
 
 namespace
 {
