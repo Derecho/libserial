@@ -1,4 +1,5 @@
-Makefile
+.lineno
+conf4662.sh
 config.h
 config.log
 config.status
