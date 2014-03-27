@@ -16,10 +16,10 @@ using namespace LibSerial ;
 // Set the values of the static members of the SerialStream class. 
 //
 const SerialStreamBuf::BaudRateEnum  
-SerialStreamBuf::DEFAULT_BAUD            = BAUD_9600          ;
+SerialStreamBuf::DEFAULT_BAUD            = BAUD_57600         ;
 
 const SerialStreamBuf::CharSizeEnum  
-SerialStreamBuf::DEFAULT_CHAR_SIZE       = CHAR_SIZE_7        ;
+SerialStreamBuf::DEFAULT_CHAR_SIZE       = CHAR_SIZE_8        ;
 
 const short                          
 SerialStreamBuf::DEFAULT_NO_OF_STOP_BITS = 1                  ;
@@ -246,6 +246,8 @@ SerialStreamBuf::SetBaudRate(const BaudRateEnum baud_rate) {
     case BAUD_38400:
     case BAUD_57600:
     case BAUD_115200:
+    case BAUD_230400:
+    case BAUD_460800:
         //
         // Get the current terminal settings. 
         //
@@ -345,6 +347,10 @@ SerialStreamBuf::BaudRate() const {
         return BAUD_57600 ; break ;
     case B115200:
         return BAUD_115200 ; break ;
+    case B230400:
+        return BAUD_230400 ; break ;
+    case B460800:
+        return BAUD_460800 ; break ;
     default:
         return BAUD_INVALID ; // we return an invalid value in this case. 
         break ;
