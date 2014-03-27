@@ -72,6 +72,8 @@ public:
         //
 #ifdef __linux__       
         BAUD_460800  = B460800,
+//#else if defined(WIN32)
+//        BAUD_250000  = B250000
 #endif
         BAUD_DEFAULT = BAUD_57600
     } ;
